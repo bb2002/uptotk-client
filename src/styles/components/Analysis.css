@@ -1,0 +1,33 @@
+.analysis-container {
+  width: 100%;
+  height: 330px;
+  background-color: #1E1E1E;
+  display: flex;
+  align-items: center;
+}
+
+.analysis-container h2 {
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+  font-size: 2.25rem;
+  margin-bottom: 16px;
+}
+
+.analysis-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.analysis-group h3 {
+  color: white;
+  margin: 0 0 4px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 2.125rem;
+}
+
+.analysis-group p {
+  color: #9C9C9C;
+  font-weight: bold;
+}
