@@ -1,0 +1,16 @@
+.upload-settings-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.upload-settings-item {
+  flex: 1;
+}
+
+.upload-settings-item > p {
+  font-weight: bold;
+}
+
+.upload-settings-item > div {
+  display: flex;
+}

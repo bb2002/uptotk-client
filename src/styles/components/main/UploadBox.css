@@ -1,0 +1,34 @@
+.ant-upload-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: -8px !important;
+  margin-right: -8px !important;
+}
+
+.ant-upload {
+  height: 250px !important;
+}
+
+.ant-upload-list-picture-container {
+  flex: 1;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.ant-upload-list-item-thumbnail svg {
+  margin-top: -16px;
+}
+
+.upload-progress-container {
+  display: flex;
+}
+
+.upload-progress-container > div {
+  flex: 1;
+}
+
+.upload-progress-container > div > p {
+  font-weight: bold;
+  margin: 0;
+}
