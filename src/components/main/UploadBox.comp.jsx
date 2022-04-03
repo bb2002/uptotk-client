@@ -52,6 +52,7 @@ const UploadBoxComp = ({ maxUploadCount, onUploadFileListChanged, style }) => {
               style={{ width: 300 }}
               percent={(fileSize / 1048576)}
               size='small'
+              status="exception"
               format={(percent) => `${Math.round(fileSize / 1048576)} / 100MB`}
             />
           </div>
@@ -61,6 +62,7 @@ const UploadBoxComp = ({ maxUploadCount, onUploadFileListChanged, style }) => {
               style={{ width: 300 }}
               percent={(fileList.length / maxUploadCount * 100.0)}
               size='small'
+              status="exception"
               format={(percent, successPercent) => `${fileList.length} / ${maxUploadCount}개`}
             />
           </div>

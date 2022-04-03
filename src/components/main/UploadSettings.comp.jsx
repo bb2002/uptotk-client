@@ -9,6 +9,7 @@ const UploadSettingsComp = ({ onFormChanged, style }) => {
     authMethod: 'open',
     password: '',
     expiredDate: 7,
+    downloadLimit: 100
   })
 
   const onAuthModeChangeHandler = (value) => {
