@@ -12,12 +12,13 @@ header > .container {
   display: flex;
   align-items: center;
 }
-.header-container > p {
-  margin: 0 0 0 16px;
+.header-container > a > p {
   font-family: "Segoe UI", sans-serif;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   color: #313131;
+  float: right;
+  margin: 4px 0 0 16px;
 }
 .header-container > .developers {
   color: #313131;

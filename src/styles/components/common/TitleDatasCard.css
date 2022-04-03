@@ -1,0 +1,22 @@
+.title-data-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.title-data-item {
+  flex: 1;
+  min-width: 150px;
+}
+
+.title-data-item > p {
+  color: #666666;
+  margin: 0;
+}
+
+.title-data-item > h3 {
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin: 0;
+}

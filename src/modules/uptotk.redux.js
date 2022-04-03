@@ -6,18 +6,35 @@ export const UPTOTK_UPLOAD_POST_SUCCESS = 'uptotk.upload.post_SUCCESS';
 export const UPTOTK_UPLOAD_POST_FAILURE = 'uptotk.upload.post_FAILURE';
 export const UPTOTK_UPLOAD_POST_LOADING = 'uptotk.upload.post_LOADING';
 
+export const UPTOTK_READ_POST = 'uptotk.read.post';
+export const UPTOTK_READ_POST_SUCCESS = 'uptotk.read.post_SUCCESS';
+export const UPTOTK_READ_POST_FAILURE = 'uptotk.read.post_FAILURE';
+export const UPTOTK_READ_POST_LOADING = 'uptotk.read.post_LOADING';
+
 export const UPTOTK_RESET = 'uptotk_RESET';
 
 export const uptotkUploadPost = createAction(UPTOTK_UPLOAD_POST, data => data);
 export const uptotkUploadPostSuccess = createAction(UPTOTK_UPLOAD_POST_SUCCESS, easyUUID => easyUUID);
 export const uptotkUploadPostFailure = createAction(UPTOTK_UPLOAD_POST_FAILURE, ex => ex);
 export const uptotkUploadPostLoading = createAction(UPTOTK_UPLOAD_POST_LOADING, loading => loading);
+
+export const uptotkReadPost = createAction(UPTOTK_READ_POST, data => data);
+export const uptotkReadPostSuccess = createAction(UPTOTK_READ_POST_SUCCESS, post => post);
+export const uptotkReadPostFailure = createAction(UPTOTK_READ_POST_FAILURE, ex => ex);
+export const uptotkReadPostLoading = createAction(UPTOTK_READ_POST_LOADING, loading => loading);
+
 export const uptotkReset = createAction(UPTOTK_RESET);
 
 const initialState = {
   uploadPost: {
     code: 0,
     easyUUID: null,
+    error: null,
+    loading: false,
+  },
+  readPost: {
+    code: 0,
+    data: null,
     error: null,
     loading: false,
   }
@@ -36,6 +53,19 @@ const uptotk = handleActions({
   }),
   [UPTOTK_UPLOAD_POST_LOADING]: (state, { payload }) => produce(state, draft => {
     draft.uploadPost.loading = payload;
+  }),
+  [UPTOTK_READ_POST_SUCCESS]: (state, { payload }) => produce(state, draft => {
+    draft.readPost.code = 200;
+    draft.readPost.data = payload;
+    draft.readPost.error = null;
+  }),
+  [UPTOTK_READ_POST_FAILURE]: (state, { payload }) => produce(state, draft => {
+    draft.readPost.code = payload.response?.status ?? -1;
+    draft.readPost.easyUUID = null;
+    draft.readPost.error = payload;
+  }),
+  [UPTOTK_READ_POST_LOADING]: (state, { payload }) => produce(state, draft => {
+    draft.readPost.loading = payload;
   }),
   [UPTOTK_RESET]: () => initialState,
 }, initialState);

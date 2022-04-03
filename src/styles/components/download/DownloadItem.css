@@ -1,0 +1,21 @@
+.download-item-container {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.files-container .ant-card-body {
+  padding: 8px !important;
+  flex: 1;
+}
+
+.files-container .ant-card {
+  flex: 1;
+  margin-left: 8px !important;
+  margin-right: 8px !important;
+  min-width: 40% !important;
+}
+
+.download-item-icon {
+  margin-right: 8px;
+}

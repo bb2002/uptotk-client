@@ -85,7 +85,6 @@ const MainPage = () => {
         }}>네트워크 속도와 파일 용량에 따라 시간이 더 걸릴 수 있습니다.</p>
 
       </Modal>
-      <div style={{ width: '100%', height: '120px' }}>여기에광고가들어감</div>
 
       <UploadBoxComp
         maxUploadCount={MAX_UPLOAD_COUNT}
@@ -112,8 +111,6 @@ const MainPage = () => {
                 loading={!uploadButtonEnabled}
                 onClick={onUploadAndDeployClicked}>Upload & Deploy</Button>
       </div>
-
-      <div style={{ width: '100%', height: '120px' }}>여기에광고가들어감</div>
     </div>
   );
 };

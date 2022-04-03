@@ -1,0 +1,1 @@
+export const UPTOTK_SERVER = 'http://localhost:3001'

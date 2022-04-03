@@ -1,0 +1,12 @@
+.files-container {
+  display: flex;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 8px;
+}
+
+.download-analysis-container {
+
+}
