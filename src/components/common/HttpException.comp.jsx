@@ -36,8 +36,6 @@ const HttpExceptionComp = ({ code, customTitle, customSubTitle }) => {
 
   }, [code, customTitle, customSubTitle])
 
-
-
   return (
     <div>
       <Title level={2}>{title}</Title>
