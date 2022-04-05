@@ -4,7 +4,7 @@ import "../../styles/components/download/Download.css"
 import TitleDatasCardComp from "../common/TitleDatasCard.comp";
 import moment from "moment";
 
-const DownloadComp = ({ isLocked, currentDownloadCount, expiredAt, files }) => {
+const DownloadComp = ({ isLocked, currentDownloadCount, expiredAt, files, password }) => {
   const [totalCapacity, setTotalCapacity] = useState(0)
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const DownloadComp = ({ isLocked, currentDownloadCount, expiredAt, files }) => {
     <div className="download-container">
       <div className="files-container">
         {
-          files.map(value => <DownloadItemComp file={value} />)
+          files.map(value => <DownloadItemComp file={value} password={password} />)
         }
       </div>
 
