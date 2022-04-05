@@ -1,13 +1,18 @@
 import {generateSagaStructure} from "./index";
 import { put, call, takeLatest } from 'redux-saga/effects';
 import {
-  UPTOTK_READ_POST,
-  UPTOTK_UPLOAD_POST, uptotkReadPostFailure, uptotkReadPostLoading, uptotkReadPostSuccess,
+  UPTOTK_READ_POST, UPTOTK_READ_STATUS,
+  UPTOTK_UPLOAD_POST,
+  uptotkReadPostFailure,
+  uptotkReadPostLoading,
+  uptotkReadPostSuccess,
+  uptotkReadStatusFailure, uptotkReadStatusLoading,
+  uptotkReadStatusSuccess,
   uptotkUploadPostFailure,
   uptotkUploadPostLoading,
   uptotkUploadPostSuccess
 } from "../modules/uptotk.redux";
-import {uptotkReadPostAxios, uptotkUploadPostAxios} from "../libs/axios/uptotk.axios";
+import {uptotkReadPostAxios, uptotkReadStatusAxios, uptotkUploadPostAxios} from "../libs/axios/uptotk.axios";
 
 function uptotkUploadPostSaga() {
   function* funOfTry({ payload }) {
@@ -46,7 +51,21 @@ function uptotkReadPostSaga() {
   return generateSagaStructure(uptotkReadPostLoading, funOfTry, funOfCatch);
 }
 
+function uptotkReadStatusSaga() {
+  function* funOfTry() {
+    const res = yield call(uptotkReadStatusAxios)
+    yield put(uptotkReadStatusSuccess(res.data));
+  }
+
+  function* funOfCatch(ex) {
+    yield put(uptotkReadStatusFailure(ex));
+  }
+
+  return generateSagaStructure(uptotkReadStatusLoading, funOfTry, funOfCatch);
+}
+
 export function* uptotkSaga() {
   yield takeLatest(UPTOTK_UPLOAD_POST, uptotkUploadPostSaga());
   yield takeLatest(UPTOTK_READ_POST, uptotkReadPostSaga());
+  yield takeLatest(UPTOTK_READ_STATUS, uptotkReadStatusSaga());
 }

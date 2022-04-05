@@ -19,3 +19,5 @@ export const uptotkUploadPostAxios = ({ form, files }) => {
 }
 
 export const uptotkReadPostAxios = ({ easyUUID, password }) => generateAxios().get(`/download/${easyUUID}?password=${password}`)
+
+export const uptotkReadStatusAxios = () => generateAxios().get('/analysis/overview')
