@@ -50,6 +50,7 @@ const DownloadPage = () => {
                 <DownloadComp
                   isLocked={post.data.authMethod !== 'open'}
                   currentDownloadCount={post.data.currentDownloadCount}
+                  maxDownloadCount={post.data.maxDownloadCount}
                   files={post.data.files}
                   expiredAt={post.data.expiredAt} />
               )
@@ -60,6 +61,7 @@ const DownloadPage = () => {
                 return (<DownloadComp
                   isLocked={post.data.authMethod !== 'open'}
                   currentDownloadCount={post.data.currentDownloadCount}
+                  maxDownloadCount={post.data.maxDownloadCount}
                   files={post.data.files}
                   expiredAt={post.data.expiredAt}
                   password={passwd}/>)
