@@ -1,6 +1,7 @@
 .download-item-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0;
 }
 
@@ -13,7 +14,13 @@
   flex: 1;
   margin-left: 8px !important;
   margin-right: 8px !important;
-  min-width: 40% !important;
+  min-width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+  .files-container .ant-card {
+    min-width: 50%;
+  }
 }
 
 .download-item-icon {

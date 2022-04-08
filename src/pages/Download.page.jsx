@@ -110,8 +110,6 @@ const DownloadPage = () => {
                 </div>
               )
             }
-
-            console.dir(post.error);
           }
           return null;
         }()

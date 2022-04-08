@@ -14,3 +14,17 @@
 .upload-settings-item > div {
   display: flex;
 }
+
+@media screen and (max-width: 992px) {
+  .upload-settings-container {
+    flex-direction: column;
+  }
+
+  .upload-settings-item {
+    margin-bottom: 16px;
+  }
+
+  .upload-settings-item > p {
+    margin-bottom: 4px;
+  }
+}

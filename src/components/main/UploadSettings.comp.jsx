@@ -48,14 +48,14 @@ const UploadSettingsComp = ({ onFormChanged, style }) => {
         <div className="upload-settings-item" style={{ flex: 2 }}>
           <p>파일 잠금</p>
           <div>
-            <Select defaultValue="open" style={{ width: 160, marginRight: 16 }} onChange={onAuthModeChangeHandler}>
+            <Select defaultValue="open" style={{ width: 120, marginRight: 16 }} onChange={onAuthModeChangeHandler}>
               <Option value="open"><GlobalOutlined /> 공개</Option>
               <Option value="password"><LockOutlined /> 비밀번호</Option>
             </Select>
             <Input.Password
               disabled={form.authMethod === 'open'}
               onChange={onPasswordChangeHandler}
-              style={{ width: 320 }}
+              style={{ width: 180  }}
               placeholder="비밀번호 입력"
               iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
             />

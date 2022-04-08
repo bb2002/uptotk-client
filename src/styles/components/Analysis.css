@@ -31,3 +31,21 @@
   color: #9C9C9C;
   font-weight: bold;
 }
+
+@media screen and (max-width: 992px) {
+  .analysis-group {
+    flex-wrap: wrap;
+  }
+
+  .analysis-group h3 {
+    font-size: 1.5rem;
+  }
+
+  .analysis-group p {
+    font-size: 0.8rem;
+  }
+
+  .analysis-container h2 {
+    font-size: 2rem;
+  }
+}
