@@ -20,7 +20,7 @@ const DownloadPage = () => {
   }, [easyUUID]);
 
   const isValidFile = (post) => !(
-    post.currentDownloadCount >= post.maxDownloadCount || // 다운로드 가능 횟수를 초과했거나
+    (post.currentDownloadCount >= post.maxDownloadCount && post.maxDownloadCount !== 0) || // 다운로드 가능 횟수를 초과했거나
     moment(post.expiredAt).valueOf() <= moment() // 만료 기간을 넘어선 경우
   )
 
