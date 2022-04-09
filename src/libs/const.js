@@ -1,1 +1,1 @@
-export const UPTOTK_SERVER = 'http://localhost:3001'
+export const UPTOTK_SERVER = 'https://api.upto.tk'
