@@ -91,8 +91,12 @@ const MainPage = () => {
         onUploadFileListChanged={onUploadFileListChanged}/>
 
       <UploadSettingsComp
-        style={{ marginTop: '32px' }}
+        style={{ marginTop: '32px', marginBottom: '32px' }}
         onFormChanged={form => setForm(form)}/>
+
+      <Alert
+          message="업로드와 관련된 정보 보호 정책은 상단 Developers 탭에서 확인하십시오."
+          type="warning" showIcon/>
 
       <div className="upload-and-deploy-button">
         {
@@ -110,6 +114,7 @@ const MainPage = () => {
                 disabled={fileSize >= 104857600 || fileList.length > MAX_UPLOAD_COUNT}
                 loading={!uploadButtonEnabled}
                 onClick={onUploadAndDeployClicked}>Upload & Deploy</Button>
+
       </div>
     </div>
   );
