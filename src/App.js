@@ -23,47 +23,11 @@ function App() {
       <HeaderComp />
       <AnalysisComp />
       <div className="container">
-        <div className="ad-container">
-          {
-            (windowWidth > 992) && (
-              <iframe src="ads.html" scrolling="no"/>
-            )
-          }
-          {
-            (windowWidth < 992 && windowWidth >= 768) && (
-              <iframe src="ads_middle.html" scrolling="no"/>
-            )
-          }
-          {
-            (windowWidth <= 768) && (
-              <iframe src="ads_small.html" scrolling="no"/>
-            )
-          }
-        </div>
-
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/developers" element={<DevelopersPage />} />
           <Route path="/:easyUUID" element={<DownloadPage />} />
         </Routes>
-
-        <div className="ad-container">
-          {
-            (windowWidth > 992) && (
-              <iframe src="ads.html" scrolling="no"/>
-            )
-          }
-          {
-            (windowWidth < 992 && windowWidth >= 768) && (
-              <iframe src="ads_middle.html" scrolling="no"/>
-            )
-          }
-          {
-            (windowWidth <= 768) && (
-              <iframe src="ads_small.html" scrolling="no"/>
-            )
-          }
-        </div>
       </div>
       <FooterComp />
     </div>
