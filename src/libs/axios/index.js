@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const UPTOTK_SERVER = process.env.NODE_ENV === 'production' ? 'https://uptotk.blbt.app' : 'http://localhost:3001';
+export const UPTOTK_SERVER = process.env.NODE_ENV === 'production' ? 'https://upi.blbt.app' : 'http://localhost:3001';
 
 export function generateAxios() {
   const options = {

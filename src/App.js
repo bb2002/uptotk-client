@@ -23,16 +23,23 @@ function App() {
       <HeaderComp />
       <AnalysisComp />
       <div className="container">
+        {/* 
+        <br />
         <Alert
           message="서비스 점검 안내"
-          description="2023년 9월 14일 오전 9시 30분 부터 오후 4시 30분 까지 (약 7시간) 전기 공사로 인해 일시적으로 서비스가 중단될 예정입니다. 이용에 참고 바랍니다."
+          description="2023년 9월 14일 오전 9시 30분 부터 오후 10시 30분 까지 (약 13시간) 전기 공사로 인해 일시적으로 서비스가 중단될 예정입니다. 이용에 참고 바랍니다."
           type="warning"
-        />
+        /> 
+        */}
+        
+        <br />
+        {/*
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/developers" element={<DevelopersPage />} />
           <Route path="/:easyUUID" element={<DownloadPage />} />
         </Routes>
+        */}
       </div>
       <FooterComp />
     </div>

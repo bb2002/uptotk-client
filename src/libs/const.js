@@ -1,1 +1,1 @@
-export const UPTOTK_SERVER = 'https://uptotk.ballbot.dev'
+export const UPTOTK_SERVER = 'https://upi.blbt.app'
